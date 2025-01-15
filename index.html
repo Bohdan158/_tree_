@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B-Tree Visualization</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    .header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 24px;
+    }
+
+    .controls {
+      margin: 20px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      max-width: 600px;
+      margin: 20px auto;
+    }
+
+    .controls input {
+      padding: 10px;
+      font-size: 14px;
+      width: 60%;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .controls button {
+      padding: 10px 15px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .controls button:hover {
+      background-color: #45a049;
+    }
+
+    .tree-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    .node {
+      display: inline-block;
+      padding: 15px;
+      margin: 5px;
+      background-color: #f1f1f1;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      min-width: 50px;
+      text-align: center;
+    }
+
+    .tree-container div {
+      margin: 10px;
+    }
+
+    .tree-container div div {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">B-Tree Visualization</div>
+
+  <div class="controls">
+    <input type="number" id="keyInput" placeholder="Enter key" />
+    <button onclick="addKey()">Add Key</button>
+    <button onclick="generateRandomKeys()">Generate Random Keys</button>
+    <button onclick="searchKey()">Search Key</button>
+    <button onclick="deleteKey()">Delete Key</button>
+  </div>
+
+  <div id="treeContainer" class="tree-container"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
